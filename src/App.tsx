@@ -29,22 +29,24 @@ const scrollTo = (element: any) => {
 };
 
 function App() {
-  const [visibleSection, setVisibleSection] = useState('');
+  const [visibleSection, setVisibleSection] = useState('Home');
 
-  const headerRef = useRef(null);
-  const homeRef = useRef(null);
-  const aboutRef = useRef(null);
-  const portfolioRef = useRef(null);
-  const blogRef = useRef(null);
-  const contactRef = useRef(null);
+  const headerRef = useRef<HTMLHeadElement>(null);
+  const homeRef = useRef<HTMLElement>(null);
+  const aboutRef = useRef<HTMLElement>(null);
+  const portfolioRef = useRef<HTMLElement>(null);
+  const blogRef = useRef<HTMLElement>(null);
+  const contactRef = useRef<HTMLElement>(null);
 
-  const sectionRefs = [
+  const sectionRefsInit = [
     { section: 'Home', ref: homeRef },
     { section: 'About', ref: aboutRef },
     { section: 'Portfolio', ref: portfolioRef },
     { section: 'Blog', ref: blogRef },
     { section: 'Contact', ref: contactRef }
   ];
+
+  const [sectionRefs, setSectionRefs] = useState(sectionRefsInit);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -62,7 +64,7 @@ function App() {
       if (selected && selected.section !== visibleSection) {
         setVisibleSection(selected.section);
       } else if (!selected && visibleSection) {
-        setVisibleSection(undefined);
+        setVisibleSection('');
       }
     };
 
@@ -71,15 +73,20 @@ function App() {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [visibleSection]);
+  }, [visibleSection, sectionRefs]);
 
   return (
     <div className='App'>
       <div className='content'>
-        <Home innerRef={homeRef} />
+        <Home
+          scrollTo={scrollTo}
+          sectionRefs={[sectionRefs[1], sectionRefs[4]]}
+          innerRef={homeRef}
+        />
         <Header
           scrollTo={scrollTo}
           sectionRefs={sectionRefs}
+          visibleSection={visibleSection}
           innerRef={headerRef}
         />
         <About innerRef={aboutRef} />

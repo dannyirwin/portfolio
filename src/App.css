@@ -12,29 +12,18 @@ section {
   left: 0;
   right: 0;
   z-index: 10;
-  background-color: red;
-}
 
-.top-spacer {
-  height: 50vh;
-  background-color: blue;
-}
-
-.bottom-spacer {
-  height: 110vh;
-}
-
-.header_link {
-  padding: 20px;
-  color: #314d4a;
-  font-weight: bold;
-  border: none;
-  border-bottom: 3px solid transparent;
-  cursor: pointer;
-  outline: none;
+  background: orange;
 }
 
 .selected {
-  border-bottom: 3px solid #11bb9a;
+  border-bottom-color: #11bb9a;
   color: #11bb9a;
+}
+
+button {
+  border: solid 5px white;
+  background: none;
+  padding: 5px 30px;
+  margin: 10px;
 }
