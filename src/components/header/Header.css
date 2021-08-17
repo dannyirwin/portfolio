@@ -1,0 +1,40 @@
+.Header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.nav-btn.selected {
+  color: black;
+  text-shadow: 2px 2px white;
+}
+
+.nav-btn {
+  font-family: var(--header-font);
+  font-weight: 900;
+  font-size: 20px;
+  color: black;
+}
+
+.nav-btn::before {
+  position: absolute;
+  content: ' ';
+  width: 0.5em;
+  height: 2px;
+  background: black;
+  transition: expandBar 1s reverse ease;
+  margin: auto;
+  z-index: -1;
+}
+
+.selected.nav-btn::before {
+  -webkit-transition: width 0.5s ease;
+  -moz-transition: width 0.5s ease;
+  -o-transition: width 0.5s ease;
+  transition: width 0.5s ease;
+  box-shadow: 1px 1px white;
+
+  width: 5em;
+}

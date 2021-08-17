@@ -5,9 +5,17 @@
 
 .WelcomeCard {
   margin: auto;
-  padding: 3em;
+  padding: 1em;
   position: relative;
+  border: solid 2px black;
+  background: rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(1px);
+  box-shadow: 10px 10px 15px lightgrey;
+}
+
+.welcome-card-inner {
   background: white;
+  padding: 5em;
 }
 
 .welcome-text {
@@ -21,12 +29,18 @@
   font-size: 32px;
 }
 
+.welcome-text > p {
+  display: inline;
+}
+
 .my-name {
   display: inline;
   font-family: var(--header-font);
-  font-weight: 500;
+  font-weight: 900;
+  font-size: 36px;
   color: grey;
   text-shadow: 2px 2px lightgrey;
+  padding: 0.5em;
 }
 
 .my-name::before {
@@ -43,4 +57,78 @@
   position: absolute;
   top: 0;
   left: 0;
+  animation: spin 1s backwards;
+}
+
+.welcome-nav-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.welcome-nav-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.welcome-nav-btn:hover {
+  color: lightgrey;
+}
+
+.welcome-nav-btn > * {
+  display: inline;
+  font-size: 20px;
+}
+
+.welcome-nav-btn:hover > *:not(p) {
+  animation: spin 0.2s;
+  transform: rotate(90deg);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .WelcomeCard {
+    margin: auto;
+    max-width: 70vw;
+  }
+
+  .welcome-card-inner {
+    padding: 1em;
+  }
+
+  .welcome-text {
+    text-transform: uppercase;
+    font-family: var(--header-font);
+    font-size: 16px;
+    padding: 0px;
+  }
+
+  .welcome-text:first-of-type {
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+  }
+
+  .welcome-text > p {
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .my-name {
+    font-size: 20px;
+  }
+
+  .welcome-nav-btn > * {
+    font-size: 14px;
+  }
 }

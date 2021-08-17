@@ -1,8 +1,13 @@
 import React from 'react';
 
+import config from '../../config';
+
+import './Header.css';
+
 interface sectionRef {
   section: string;
   ref: any;
+  icon: React.FC;
 }
 
 interface props {
@@ -22,23 +27,37 @@ export default function Header({
     return sectionRefs.map((sectionRef: sectionRef, i) => {
       return (
         <button
-          className={handleClassNames(sectionRef.section)}
+          className={handleBtnClassNames(sectionRef.section)}
           onClick={() => scrollTo(sectionRef.ref)}
           key={i}
         >
-          {sectionRef.section}
+          {window.innerWidth < 500 ? sectionRef.icon({}) : sectionRef.section}
         </button>
       );
     });
   };
 
-  const handleClassNames = (section: string) => {
+  const handleBtnClassNames = (section: string) => {
     const className = 'nav-btn';
     return section === visibleSection ? className + ' selected' : className;
   };
 
+  const handleHeaderColor = () => {
+    let color;
+    sectionRefs.forEach((sectionRef, i) => {
+      if (sectionRef.section === visibleSection) {
+        color = config.colors[i];
+      }
+    });
+    return color;
+  };
+
   return (
-    <header className='Header' ref={innerRef}>
+    <header
+      className='Header'
+      ref={innerRef}
+      style={{ background: handleHeaderColor() }}
+    >
       {showNavButtons()}
     </header>
   );

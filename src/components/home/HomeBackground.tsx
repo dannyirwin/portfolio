@@ -2,6 +2,8 @@ import React from 'react';
 import Sketch from 'react-p5';
 import p5Types from 'p5';
 
+import config from '../../config';
+
 // interface props {}
 
 interface cell {
@@ -19,31 +21,22 @@ interface runner {
 }
 
 export default function P5Background() {
-  const cellSize = 50;
-  const movesPerCell = 4;
-  const nOfRunners = 20;
-  const randomTurnChance = 10;
+  const { colors, cellSize, movesPerCell, nOfRunners, randomTurnChance } =
+    config;
+
   let runners: runner[] = [];
   let cells: cell[] = [];
 
-  const colors: string[] = [
-    '#1be7ff',
-    '#6eeb83',
-    '#e4ff1a',
-    '#ffb800',
-    '#FF5714'
-  ];
-
   function setup(p5: p5Types, canvasParentRef: Element) {
     p5.createCanvas(p5.windowWidth, p5.windowHeight).parent(canvasParentRef);
-    p5.background(220);
+    p5.background(255);
     p5.frameRate(8);
     generateCells(p5);
     generateRunners(p5);
   }
   function draw(p5: p5Types) {
     p5.stroke(0);
-    p5.background(220, 150);
+    p5.background(255, 150);
     drawCells(p5);
     handleRandomTurns(p5);
     runners.forEach(runner => {
@@ -115,7 +108,7 @@ export default function P5Background() {
     flipCell() {
       const p5 = this.p5;
       p5.strokeWeight(cellSize * 0.4);
-      p5.stroke(220);
+      p5.stroke(255);
       this.drawCell();
       this.direction *= -1;
       p5.strokeWeight(2);

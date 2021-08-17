@@ -4,10 +4,12 @@
   --header-font: 'Raleway', sans-serif;
 
   --color1: #1be7ff;
-  --color1: #6eeb83;
-  --color1: #e4ff1a;
-  --color1: #ffb800;
-  --color1: #ff5714;
+  --color2: #6eeb83;
+  --color3: #e4ff1a;
+  --color4: #ffb800;
+  --color5: #ff5714;
+
+  --mobile-width: 10424px;
 }
 
 .App {
@@ -16,30 +18,14 @@
 
 section {
   min-height: 100vh;
-}
-
-.Header {
-  position: sticky;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 10;
-
-  background: orange;
-}
-
-.selected {
-  border-bottom-color: #11bb9a;
-  color: #11bb9a;
+  min-width: 100vw;
 }
 
 button {
   border: none;
-  border-bottom: solid 5px white;
   background: none;
   padding: 5px 30px;
   margin: 10px;
-
   text-transform: uppercase;
 }
 
@@ -47,5 +33,11 @@ hr {
   border-style: none;
   height: 2px;
   background: lightgrey;
-  width: 100%;
+  width: 10%;
+}
+
+@media only screen and (max-width: 1024px) {
+  button {
+    padding: 5px 5px;
+  }
 }

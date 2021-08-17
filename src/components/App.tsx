@@ -1,4 +1,11 @@
 import React, { useRef, useEffect, useState } from 'react';
+import {
+  BsInfoCircle,
+  BsHouseDoor,
+  BsCollection,
+  BsFileRichtext,
+  BsEnvelope
+} from 'react-icons/bs';
 
 import './App.css';
 
@@ -39,11 +46,11 @@ function App() {
   const contactRef = useRef<HTMLElement>(null);
 
   const sectionRefsInit = [
-    { section: 'Home', ref: homeRef },
-    { section: 'About', ref: aboutRef },
-    { section: 'Portfolio', ref: portfolioRef },
-    { section: 'Blog', ref: blogRef },
-    { section: 'Contact', ref: contactRef }
+    { section: 'Home', ref: homeRef, icon: BsHouseDoor },
+    { section: 'About', ref: aboutRef, icon: BsInfoCircle },
+    { section: 'Portfolio', ref: portfolioRef, icon: BsCollection },
+    { section: 'Blog', ref: blogRef, icon: BsFileRichtext },
+    { section: 'Contact', ref: contactRef, icon: BsEnvelope }
   ];
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -79,23 +86,21 @@ function App() {
 
   return (
     <div className='App'>
-      <div className='content'>
-        <Home
-          scrollTo={scrollTo}
-          sectionRefs={[sectionRefs[1], sectionRefs[4]]}
-          innerRef={homeRef}
-        />
-        <Header
-          scrollTo={scrollTo}
-          sectionRefs={sectionRefs}
-          visibleSection={visibleSection}
-          innerRef={headerRef}
-        />
-        <About innerRef={aboutRef} />
-        <Portfolio innerRef={portfolioRef} />
-        <Blog innerRef={blogRef} />
-        <Contact innerRef={contactRef} />
-      </div>
+      <Home
+        scrollTo={scrollTo}
+        sectionRefs={[sectionRefs[1], sectionRefs[4]]}
+        innerRef={homeRef}
+      />
+      <Header
+        scrollTo={scrollTo}
+        sectionRefs={sectionRefs}
+        visibleSection={visibleSection}
+        innerRef={headerRef}
+      />
+      <About innerRef={aboutRef} />
+      <Portfolio innerRef={portfolioRef} />
+      <Blog innerRef={blogRef} />
+      <Contact innerRef={contactRef} />
     </div>
   );
 }
