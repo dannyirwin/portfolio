@@ -2,12 +2,12 @@ import React, { useRef, useEffect, useState } from 'react';
 
 import './App.css';
 
-import Home from './containers/Home';
-import About from './containers/About';
-import Portfolio from './containers/Portfolio';
-import Blog from './containers/Blog';
-import Contact from './containers/Contact';
-import Header from './containers/Header';
+import Home from './home/Home';
+import About from './about/About';
+import Portfolio from './portfolio/Portfolio';
+import Blog from './blog/Blog';
+import Contact from './contact/Contact';
+import Header from './header/Header';
 
 const getDimensions = (element: any) => {
   const { height } = element.getBoundingClientRect();
@@ -46,6 +46,7 @@ function App() {
     { section: 'Contact', ref: contactRef }
   ];
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [sectionRefs, setSectionRefs] = useState(sectionRefsInit);
 
   useEffect(() => {
@@ -59,6 +60,7 @@ function App() {
           const { offsetBottom, offsetTop } = getDimensions(ele);
           return scrollPosition > offsetTop && scrollPosition < offsetBottom;
         }
+        return null;
       });
 
       if (selected && selected.section !== visibleSection) {

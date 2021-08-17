@@ -1,5 +1,4 @@
 import React from 'react';
-import { PropertyAssignment } from 'typescript';
 
 interface props {
   innerRef: any;
