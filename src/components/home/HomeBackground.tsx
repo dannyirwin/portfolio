@@ -21,10 +21,18 @@ interface runner {
 export default function P5Background() {
   const cellSize = 50;
   const movesPerCell = 4;
-  const nOfRunners = 6;
+  const nOfRunners = 20;
   const randomTurnChance = 10;
   let runners: runner[] = [];
   let cells: cell[] = [];
+
+  const colors: string[] = [
+    '#1be7ff',
+    '#6eeb83',
+    '#e4ff1a',
+    '#ffb800',
+    '#FF5714'
+  ];
 
   function setup(p5: p5Types, canvasParentRef: Element) {
     p5.createCanvas(p5.windowWidth, p5.windowHeight).parent(canvasParentRef);
@@ -43,7 +51,14 @@ export default function P5Background() {
     });
   }
 
+  function windowResized(p5: p5Types) {
+    p5.resizeCanvas(p5.windowWidth, p5.windowHeight);
+    generateCells(p5);
+    generateRunners(p5);
+  }
+
   function generateCells(p5: p5Types) {
+    cells = [];
     for (let row = -1; row < p5.windowWidth / cellSize + 1; row++) {
       const x = row * cellSize + cellSize / 2;
       for (let col = -1; col < p5.windowHeight / cellSize + 1; col++) {
@@ -56,7 +71,8 @@ export default function P5Background() {
   function generateRunners(p5: p5Types) {
     runners = [];
     for (let i = 0; i < nOfRunners; i++) {
-      runners.push(new Runner(p5));
+      const color: string = colors[i < colors.length ? i : i % colors.length];
+      runners.push(new Runner(p5, color));
     }
   }
 
@@ -121,8 +137,9 @@ export default function P5Background() {
     cell1: cell;
     cell2: cell;
     p5: p5Types;
+    color: string;
 
-    constructor(p5: p5Types) {
+    constructor(p5: p5Types, color: string) {
       this.cell1 = cells[0];
       this.cell2 = cells[1];
       this.x = 0;
@@ -136,6 +153,7 @@ export default function P5Background() {
       this.maxAge = p5.random(100, 500);
       this.movementToggle = false;
       this.p5 = p5;
+      this.color = color;
       this.randomStart();
     }
     findNext() {
@@ -169,6 +187,7 @@ export default function P5Background() {
     draw() {
       const p5 = this.p5;
       this.move();
+      p5.stroke(p5.color(this.color));
       p5.strokeWeight(Math.sin(this.age / 5) * cellSize * 0.05 + this.baseSize);
       p5.point(this.x, this.y);
       this.age++;
@@ -230,7 +249,7 @@ export default function P5Background() {
 
   return (
     <div className='HomeBackground'>
-      <Sketch setup={setup} draw={draw} />
+      <Sketch setup={setup} draw={draw} windowResized={windowResized} />
     </div>
   );
 }

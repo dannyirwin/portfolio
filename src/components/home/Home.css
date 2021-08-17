@@ -1,0 +1,46 @@
+.Home {
+  min-height: 100vh;
+  display: flex;
+}
+
+.WelcomeCard {
+  margin: auto;
+  padding: 3em;
+  position: relative;
+  background: white;
+}
+
+.welcome-text {
+  text-transform: uppercase;
+  margin: 10px;
+  font-family: var(--header-font);
+  font-size: 24px;
+}
+
+.welcome-text:first-of-type {
+  font-size: 32px;
+}
+
+.my-name {
+  display: inline;
+  font-family: var(--header-font);
+  font-weight: 500;
+  color: grey;
+  text-shadow: 2px 2px lightgrey;
+}
+
+.my-name::before {
+  content: 'danny irwin';
+  position: absolute;
+  transform: translate(-2px, -2px);
+  color: black;
+  text-shadow: none;
+}
+
+.HomeBackground {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
