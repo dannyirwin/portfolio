@@ -9,11 +9,12 @@
   --color4: #ffb800;
   --color5: #ff5714;
 
-  --mobile-width: 10424px;
+  --shadow-value: 10px 10px 15px rgba(0, 0, 0, 0.2);
 }
 
 .App {
   text-align: center;
+  font-family: var(--header-font);
 }
 
 section {
@@ -34,6 +35,14 @@ hr {
   height: 2px;
   background: lightgrey;
   width: 10%;
+}
+
+h1 {
+}
+
+h2,
+h3 {
+  font-weight: 500;
 }
 
 @media only screen and (max-width: 1024px) {

@@ -13,7 +13,7 @@ export default function WelcomeCard({ sectionRefs, scrollTo }: props) {
       <div className='welcome-card-inner'>
         <div className='welcome-text'>
           <p>Hello, I'm</p>
-          <p className='my-name'>Danny Irwin</p>
+          <h1 className='my-name'>Danny Irwin</h1>
         </div>
         <div className='welcome-text'>I'm a full-stack web developer.</div>
         <hr></hr>
