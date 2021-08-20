@@ -37,14 +37,13 @@
   object-fit: contain;
   margin: auto;
   border: solid var(--color1) 8px;
-
   border-radius: 50%;
 }
 
 .image-container {
-  padding: 1em;
+  padding: 2em;
   border: solid 2px black;
-  background-color: white;
+  background-color: var(--opaque-background);
   border-radius: 50%;
   box-shadow: var(--shadow-value);
   margin: auto;

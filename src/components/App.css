@@ -10,6 +10,7 @@
   --color5: #ff5714;
 
   --shadow-value: 10px 10px 15px rgba(0, 0, 0, 0.2);
+  --opaque-background: rgba(0, 0, 0, 0.05);
 }
 
 .App {

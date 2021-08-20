@@ -1,9 +1,9 @@
 import React from 'react';
 
-import AboutMeText from './AboutMeText';
-
 import './About.css';
-import { AboutMeTechs } from './AboutMeTechs';
+
+import AboutMeText from './AboutMeText';
+import AboutMeTechs from './AboutMeTechs';
 import AboutMeImage from './AboutMeImage';
 
 interface props {

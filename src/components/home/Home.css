@@ -5,11 +5,11 @@
 
 .WelcomeCard {
   margin: auto;
-  padding: 1em;
+  padding: 2em;
   position: relative;
   border: solid 2px black;
-  background: rgba(0, 0, 0, 0.05);
-  backdrop-filter: blur(1px);
+  background: var(--opaque-background);
+  backdrop-filter: blur(2px);
   box-shadow: var(--shadow-value);
 }
 
@@ -70,6 +70,7 @@
   justify-content: center;
   align-items: center;
   margin: auto;
+  cursor: pointer;
 }
 
 .welcome-nav-btn:hover {

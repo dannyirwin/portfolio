@@ -2,14 +2,14 @@ import React from 'react';
 
 import TechCard from './TechCard';
 
-import { content } from '../../content';
+import { techs } from '../../content/techs';
 
-export const AboutMeTechs: React.FC = () => {
+export default function AboutMeTechs() {
   const showTechs = () => {
-    return content.techs.map((tech, i) => {
+    return techs.map((tech, i) => {
       return <TechCard tech={tech} key={i} />;
     });
   };
 
   return <div className='AboutMeTechs'>{showTechs()}</div>;
-};
+}

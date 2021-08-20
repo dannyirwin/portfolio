@@ -16,6 +16,7 @@
   font-weight: 900;
   font-size: 20px;
   color: black;
+  cursor: pointer;
 }
 
 .nav-btn::before {
