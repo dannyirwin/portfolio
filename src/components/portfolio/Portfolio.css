@@ -1,0 +1,83 @@
+.Portfolio {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ProjectsContainer {
+  display: flex;
+  flex-direction: row;
+  max-width: 910px;
+  margin: 0px auto;
+}
+
+.ProjectCard {
+  width: 300px;
+  position: relative;
+  padding-bottom: 0.5em;
+  border: 8px solid;
+  box-shadow: var(--shadow-value);
+  margin: 0.5em;
+}
+
+.project-title {
+  display: inline;
+  font-family: var(--header-font);
+  font-size: 26px;
+  color: black;
+  text-shadow: 2px 2px lightgrey;
+  padding: 0.5em;
+}
+
+.project-title::before {
+  position: absolute;
+  transform: translate(2px, 2px);
+  color: black;
+  text-shadow: none;
+}
+
+.ProjectCard > img {
+  width: 300px;
+  height: 300px;
+}
+
+.project-techs {
+  font-size: 12px;
+}
+
+.see-more-container {
+  position: absolute;
+  display: flex;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.see-more-container:hover {
+  opacity: 1;
+}
+
+.see-more-btn {
+  color: black;
+  font-size: 20px;
+  padding: 1em;
+  background-color: white;
+  cursor: pointer;
+}
+
+.see-more-btn-container {
+  background-color: var(--opaque-background);
+  margin: auto;
+  padding: 1em;
+  backdrop-filter: blur(2px);
+  border: 2px solid;
+  cursor: pointer;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+.see-more-btn-container::hover {
+}
