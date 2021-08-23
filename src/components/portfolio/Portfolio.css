@@ -1,24 +1,68 @@
 .Portfolio {
+  position: relative;
   width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: white;
+
+  --preview-image-size: 300px;
+  --detail-image-size: 500px;
+}
+
+.Portfolio > h2 {
+  position: absolute;
+  margin-top: 5em;
+  top: 0;
 }
 
 .ProjectsContainer {
+  position: absolute;
+  transform: translateX(-200%);
+  transition: 0.5s ease;
   display: flex;
   flex-direction: row;
   max-width: 910px;
   margin: 0px auto;
 }
 
+.ProjectDetails {
+  position: absolute;
+  transform: translateX(200%);
+  transition: 0.5s ease;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  margin: 5em;
+  box-shadow: var(--shadow-value);
+}
+
+.visible {
+  transform: translateY(0%);
+  transition: 0.5s ease;
+}
+
+.ProjectDetailsImages {
+  height: var(--detail-image-size);
+}
+
+.ProjectDetailsImages > img {
+  height: 100%;
+}
+
+.ProjectDetailsText {
+  max-width: 50ch;
+  margin: 2em;
+}
+
 .ProjectCard {
-  width: 300px;
+  width: var(--preview-image-size);
   position: relative;
   padding-bottom: 0.5em;
-  border: 8px solid;
   box-shadow: var(--shadow-value);
+  background-color: white;
   margin: 0.5em;
 }
 
@@ -27,7 +71,7 @@
   font-family: var(--header-font);
   font-size: 26px;
   color: black;
-  text-shadow: 2px 2px lightgrey;
+  text-shadow: 2px 2px white;
   padding: 0.5em;
 }
 
@@ -39,11 +83,11 @@
 }
 
 .ProjectCard > img {
-  width: 300px;
-  height: 300px;
+  width: var(--preview-image-size);
+  height: var(--preview-image-size);
 }
 
-.project-techs {
+.ProjectTechs {
   font-size: 12px;
 }
 
@@ -79,5 +123,55 @@
   box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
 }
 
-.see-more-btn-container::hover {
+.ProjectDetails > button {
+  margin: 0px;
+  padding: 0px;
+  min-width: 32px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color3);
+}
+
+.project-links-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.ProjectLink {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0.5em;
+  border: solid 1px solid;
+  color: black;
+}
+
+.ProjectLink > * {
+  align-content: center;
+  margin: 0 0.5em;
+}
+
+.slideshow-controls {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  width: var(--detail-image-size);
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(2px);
+}
+
+.slideshow-controls > button {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  padding: 3px;
+  cursor: pointer;
+  color: white;
+  margin: 5px;
 }

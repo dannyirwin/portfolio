@@ -1,7 +1,14 @@
 .About {
-  padding-top: 5em;
+  padding-top: 6em;
   max-width: 100vw;
-  background-color: red;
+  background-color: var(--opaque-background);
+  backdrop-filter: blur(2px);
+}
+
+.about-me-outer-container {
+  width: 100%;
+  height: 100%;
+  background-color: white;
 }
 
 .about-me-container {
@@ -9,6 +16,8 @@
   flex-direction: column;
   margin: auto;
   width: 70ch;
+  padding: 2em 0;
+  height: 100%;
 }
 
 .AboutMeText {

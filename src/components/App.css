@@ -24,8 +24,6 @@
   position: fixed;
   top: 0;
   left: 0;
-
-  transition: o;
 }
 
 section {
@@ -44,9 +42,9 @@ button {
 
 hr {
   border-style: none;
-  height: 2px;
-  background: lightgrey;
-  width: 10%;
+  height: 1px;
+  background: black;
+  width: 50%;
 }
 
 h1 {
