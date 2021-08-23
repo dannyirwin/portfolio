@@ -1,14 +1,18 @@
-import makeIt01 from '../images/projects/makeIt01.png';
-import makeIt02 from '../images/projects/makeIt02.png';
-import makeIt03 from '../images/projects/makeIt03.png';
-
 import { FaGithub } from 'react-icons/fa';
 import { FaVideo } from 'react-icons/fa';
 import { FaWindowRestore } from 'react-icons/fa';
 
+import makeIt01 from '../images/projects/makeIt01.png';
+import makeIt02 from '../images/projects/makeIt02.png';
+import makeIt03 from '../images/projects/makeIt03.png';
+
 import orderUp01 from '../images/projects/orderUp01.png';
 import orderUp02 from '../images/projects/orderUp02.png';
 import orderUp03 from '../images/projects/orderUp03.png';
+
+import space01 from '../images/projects/space01.png';
+import space02 from '../images/projects/space02.png';
+import spaceGif from '../images/projects/spaceGif.gif';
 
 export const projects = [
   // {
@@ -35,7 +39,7 @@ export const projects = [
       'React Redux Node Express Knex Objection JWT Bcrypt PostgreSQL Firebase Heroku',
     images: [makeIt02, makeIt03, makeIt01],
     description:
-      'MakeIt was my capstone project from my time with Flatiron School.  It is a place for creative and handy makers to write and publish written tutorials.  The goal of the project was to lean a new tech stack and as well as showcase some of my learning during my courses.',
+      'MakeIt was my capstone project from my time with Flatiron School.  It is a place for creative and handy makers to write and publish written tutorials.  The goal of the project was to lean a new tech stack and as well as showcase some of my learning during my courses. This was my first experience using a Node backend and implementing Redux and image hosting on a full-scale project.',
     links: [
       {
         label: 'Demo',
@@ -48,7 +52,7 @@ export const projects = [
         icon: <FaGithub />
       },
       {
-        label: 'View Site',
+        label: 'Visit Site',
         url: 'https://makeit-e985d.web.app/',
         icon: <FaWindowRestore />
       }
@@ -61,7 +65,7 @@ export const projects = [
     techs: 'React Rails WebSockets PostgreSQL Heroku',
     images: [orderUp01, orderUp02, orderUp03],
     description:
-      '_description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt perspiciatis corrupti repellat accusantium eligendi molestiae unde laborum temporibus ipsa, reprehenderit, fugit ad ut explicabo enim culpa officia vitae! Assumenda, voluptatum.',
+      'Order Up is an online multiplayer card based on the real world card game, Set. It is a game about collecting combinations of three cards based on patterns.  My goal for this project was to teach myself WebSockets with ActionCable, as well as put to use what we had learned about Ruby on Rails during my bootcamp.  Players can join a public game, host a private one, or practice alone, as well as customize their character avatar and trash talk their friends using in-game live chat.  The site is live with the backend deployed via Heroku.',
     links: [
       {
         label: 'Demo',
@@ -70,12 +74,38 @@ export const projects = [
       },
       {
         label: 'Github',
-        url: 'https://github.com/dannyirwin/order-up-frontend/settings/pages',
+        url: 'https://github.com/dannyirwin/order-up-frontend',
         icon: <FaGithub />
       },
       {
-        label: 'View Site',
+        label: 'Visit Site',
         url: 'https://dannyirwin.github.io/order-up-frontend/',
+        icon: <FaWindowRestore />
+      }
+    ]
+  },
+  {
+    title: 'Space Sim',
+    previewImage: space01,
+    previewText: 'Simulate orbital mechanics using real physics',
+    techs: 'JavaScript HTML CSS',
+    images: [spaceGif, space01, space02],
+    description:
+      "I built this project in 2020 before I started my coding classes. I had been trying to push my coding abilities and the time and was waste deep in the popular Three Body Problem trilogy by Chien Lieu. The goal was to somewhat accurately simulate N-Body problems based on real world physics. Each body's position is calculated in real time based on its velocity and the attractive forces between it and its neighbors.",
+    links: [
+      {
+        label: 'Demo',
+        url: 'https://www.youtube.com/watch?v=iZnxW0VS7Z8',
+        icon: <FaVideo />
+      },
+      {
+        label: 'Github',
+        url: 'https://github.com/dannyirwin/Orbital-Physics',
+        icon: <FaGithub />
+      },
+      {
+        label: 'Visit Site',
+        url: 'https://dannyirwin.github.io/Orbital-Physics/',
         icon: <FaWindowRestore />
       }
     ]

@@ -45,7 +45,9 @@
 }
 
 .ProjectDetailsImages {
-  height: var(--detail-image-size);
+  max-height: var(--detail-image-size);
+  max-width: var(--detail-image-size);
+  background: black;
 }
 
 .ProjectDetailsImages > img {
@@ -133,6 +135,12 @@
   justify-content: center;
   align-items: center;
   background-color: var(--color3);
+  cursor: pointer;
+}
+
+.ProjectDetails > button > p {
+  text-orientation: sideways-right;
+  writing-mode: vertical-rl;
 }
 
 .project-links-container {

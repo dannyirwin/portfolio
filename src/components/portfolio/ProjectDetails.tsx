@@ -39,7 +39,7 @@ export default function ProjectDetails({
     <div className={`ProjectDetails ${handleVisibleClass()}`}>
       <button onClick={handleGoBack}>
         <FaAngleDoubleLeft />
-        <FaAngleDoubleLeft />
+        <p>Back to Project Gallery</p>
         <FaAngleDoubleLeft />
       </button>
       <ProjectDetailsImages
