@@ -1,5 +1,4 @@
 import React from 'react';
-import { techs } from '../../content/techs';
 
 interface project {
   title: string;

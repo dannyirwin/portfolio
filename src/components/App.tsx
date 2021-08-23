@@ -62,9 +62,9 @@ function App() {
       const scrollPosition = window.scrollY + headerHeight;
 
       const selected = sectionRefs.find(({ section, ref }) => {
-        const ele = ref.current;
-        if (ele) {
-          const { offsetBottom, offsetTop } = getDimensions(ele);
+        const element = ref.current;
+        if (element) {
+          const { offsetBottom, offsetTop } = getDimensions(element);
           return scrollPosition > offsetTop && scrollPosition < offsetBottom;
         }
         return null;

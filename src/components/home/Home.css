@@ -50,15 +50,6 @@
   text-shadow: none;
 }
 
-.HomeBackground {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  animation: spin 1s backwards;
-}
-
 .welcome-nav-container {
   display: flex;
   flex-direction: row;

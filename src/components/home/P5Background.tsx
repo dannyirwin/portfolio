@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import Sketch from 'react-p5';
 import p5Types from 'p5';
 
@@ -241,8 +241,11 @@ export default function P5Background() {
   }
 
   return (
-    <div className='HomeBackground'>
-      <Sketch setup={setup} draw={draw} windowResized={windowResized} />
-    </div>
+    <Sketch
+      setup={setup}
+      draw={draw}
+      windowResized={windowResized}
+      className='P5Background'
+    />
   );
 }

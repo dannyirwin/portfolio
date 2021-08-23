@@ -3,9 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
+import P5Background from './components/home/P5Background';
 
 ReactDOM.render(
   <React.StrictMode>
+    <P5Background />
     <App />
   </React.StrictMode>,
   document.getElementById('root')

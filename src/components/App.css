@@ -18,9 +18,20 @@
   font-family: var(--header-font);
 }
 
+.P5Background {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  transition: o;
+}
+
 section {
   min-height: 100vh;
   min-width: 100vw;
+  position: relative;
 }
 
 button {

@@ -52,7 +52,7 @@ export const projects = [
     previewImage: orderUp01,
     previewText: 'Online multiplayer card game',
     techs: 'React Rails WebSockets PostgreSQL Heroku',
-    images: [orderUp01, orderUp02, orderUp03],
+    images: [orderUp01, orderUp02, orderUp03, orderUp04],
     description:
       '_description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt perspiciatis corrupti repellat accusantium eligendi molestiae unde laborum temporibus ipsa, reprehenderit, fugit ad ut explicabo enim culpa officia vitae! Assumenda, voluptatum.',
     links: [
