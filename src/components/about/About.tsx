@@ -13,14 +13,18 @@ interface props {
 export default function About({ innerRef }: props) {
   return (
     <section className='About' ref={innerRef}>
+      <div className='about-me-image-panel'>
+        <AboutMeImage />
+      </div>
       <div className='about-me-outer-container'>
         <div className='about-me-container'>
-          <AboutMeImage />
-          <h2>A BIT ABOUT ME</h2>
-          <AboutMeText />
-          <hr></hr>
-          <h3>Some Techs I've used</h3>
-          <AboutMeTechs />
+          <div className='about-me-content'>
+            <h2>A BIT ABOUT ME</h2>
+            <AboutMeText />
+            <hr></hr>
+            <h3>Some Techs I've used</h3>
+            <AboutMeTechs />
+          </div>
         </div>
       </div>
     </section>

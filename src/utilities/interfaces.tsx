@@ -13,3 +13,12 @@ export interface projectLink {
   label: string;
   icon?: any;
 }
+
+export interface post {
+  title: string;
+  description?: string;
+  url?: string;
+  image?: any;
+  icon?: any;
+  source?: string;
+}

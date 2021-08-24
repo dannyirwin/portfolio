@@ -1,0 +1,41 @@
+.Blog {
+  height: 100%;
+  width: 100%;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.BlogCard {
+  text-align: left;
+}
+
+.BlogCard > a {
+  text-decoration: none;
+  color: black;
+
+  border: 2px solid black;
+  margin: 0.5em;
+  padding: 1em;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.blog-card-content {
+  width: 50ch;
+  margin-right: 0.5em;
+}
+
+.blog-card-source {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  color: grey;
+}

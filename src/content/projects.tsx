@@ -150,7 +150,7 @@ export const projects = [
     title: 'SightlessVR',
     previewImage: sightless01,
     previewText: 'VR Audio Haptic Experiment',
-    techs: 'UnrealEngine Garageband',
+    techs: 'UnrealEngine',
     images: [sightless01],
     description: 'Sightless ...',
     links: [
@@ -165,7 +165,7 @@ export const projects = [
     title: 'Generative Art',
     previewImage: genArt01,
     previewText: 'Making a hobby of Math and Art',
-    techs: 'P5 Garageband UnrealEngine',
+    techs: 'p5',
     images: [genArt01, genArt02, genArt03],
     description: 'The hobby and fun stuff...',
     links: [
