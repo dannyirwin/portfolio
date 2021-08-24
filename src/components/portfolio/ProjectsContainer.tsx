@@ -11,8 +11,9 @@ interface props {
 
 export default function ProjectsContainer({ selectProject, isInView }: props) {
   const getColor = (i: number) => {
-    const repeats = i - (i % config.colors.length);
-    const index = i - repeats * config.colors.length;
+    const nOfColors = config.colors.length;
+    const repeats = (i - (i % nOfColors)) / nOfColors;
+    const index = i - repeats * nOfColors;
     return config.colors[index];
   };
 

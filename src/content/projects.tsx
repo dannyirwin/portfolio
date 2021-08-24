@@ -1,6 +1,9 @@
-import { FaGithub } from 'react-icons/fa';
-import { FaVideo } from 'react-icons/fa';
-import { FaWindowRestore } from 'react-icons/fa';
+import {
+  FaGithub,
+  FaPencilAlt,
+  FaVideo,
+  FaWindowRestore
+} from 'react-icons/fa';
 
 import makeIt01 from '../images/projects/makeIt01.png';
 import makeIt02 from '../images/projects/makeIt02.png';
@@ -21,7 +24,10 @@ import sampL04 from '../images/projects/sampL04.png';
 import sampL05 from '../images/projects/sampL05.png';
 
 import sightless01 from '../images/projects/sightless01.png';
-import sightless02 from '../images/projects/sightless02.jpeg';
+
+import genArt01 from '../images/projects/genArt01.png';
+import genArt02 from '../images/projects/genArt02.png';
+import genArt03 from '../images/projects/genArt03.png';
 
 export const projects = [
   // {
@@ -144,7 +150,7 @@ export const projects = [
     title: 'SightlessVR',
     previewImage: sightless01,
     previewText: 'VR Audio Haptic Experiment',
-    techs: 'UnrealEngine4 Garageband',
+    techs: 'UnrealEngine Garageband',
     images: [sightless01],
     description: 'Sightless ...',
     links: [
@@ -152,6 +158,31 @@ export const projects = [
         label: 'Trailer',
         url: 'https://www.youtube.com/watch?v=BqiLSUTwXIo',
         icon: <FaVideo />
+      }
+    ]
+  },
+  {
+    title: 'Generative Art',
+    previewImage: genArt01,
+    previewText: 'Making a hobby of Math and Art',
+    techs: 'P5 Garageband UnrealEngine',
+    images: [genArt01, genArt02, genArt03],
+    description: 'The hobby and fun stuff...',
+    links: [
+      {
+        label: 'Circle of Strings',
+        url: 'https://editor.p5js.org/dannyirwin/full/_w-aa0Vwl',
+        icon: <FaPencilAlt />
+      },
+      {
+        label: 'Blue Silk',
+        url: 'https://editor.p5js.org/dannyirwin/full/SrnkCJLOb',
+        icon: <FaPencilAlt />
+      },
+      {
+        label: 'Random Dot Walker',
+        url: 'https://editor.p5js.org/dannyirwin/full/xa6ACPQ_n',
+        icon: <FaPencilAlt />
       }
     ]
   }
