@@ -14,6 +14,12 @@ import space01 from '../images/projects/space01.png';
 import space02 from '../images/projects/space02.png';
 import spaceGif from '../images/projects/spaceGif.gif';
 
+import sampL01 from '../images/projects/sampL01.png';
+import sampL02 from '../images/projects/sampL02.png';
+import sampL03 from '../images/projects/sampL03.png';
+import sampL04 from '../images/projects/sampL04.png';
+import sampL05 from '../images/projects/sampL05.png';
+
 export const projects = [
   // {
   //   title: '_title',
@@ -106,6 +112,27 @@ export const projects = [
       {
         label: 'Visit Site',
         url: 'https://dannyirwin.github.io/Orbital-Physics/',
+        icon: <FaWindowRestore />
+      }
+    ]
+  },
+  {
+    title: 'SampL',
+    previewImage: sampL01,
+    previewText: 'Extract a color palette from an image',
+    techs: 'React CSS',
+    images: [sampL02, sampL05, sampL01, sampL04, sampL03],
+    description:
+      'SampL is a single page React application that uses a library to extract colors from an image from the web, provides them for the user, and changes the them of the page to match. It was a group project in the second phase of bootcamp and was my first completed react project.',
+    links: [
+      {
+        label: 'Github',
+        url: 'https://github.com/dannyirwin/phase-2-group-project',
+        icon: <FaGithub />
+      },
+      {
+        label: 'Visit Site',
+        url: 'https://dannyirwin.github.io/phase-2-group-project/',
         icon: <FaWindowRestore />
       }
     ]

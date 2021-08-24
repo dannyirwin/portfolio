@@ -28,15 +28,17 @@ export default function Portfolio({ innerRef }: props) {
   return (
     <section className='Portfolio' ref={innerRef}>
       <h2>Want to see some of my work?</h2>
-      <ProjectsContainer
-        selectProject={selectProject}
-        isInView={!showingProjectDetails}
-      />
-      <ProjectDetails
-        project={selectedProject}
-        toggleView={toggleView}
-        isInView={showingProjectDetails}
-      />
+      <div className='portfolio-content'>
+        <ProjectsContainer
+          selectProject={selectProject}
+          isInView={!showingProjectDetails}
+        />
+        <ProjectDetails
+          project={selectedProject}
+          toggleView={toggleView}
+          isInView={showingProjectDetails}
+        />
+      </div>
     </section>
   );
 }

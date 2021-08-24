@@ -45,6 +45,7 @@ export default function ProjectDetails({
       <ProjectDetailsImages
         image={project.images[imageIndex]}
         handleNextImage={handleNextImage}
+        showControls={project.images.length > 1}
       />
       <ProjectDetailsText project={project} />
     </div>
