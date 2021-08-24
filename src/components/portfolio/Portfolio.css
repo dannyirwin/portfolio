@@ -1,58 +1,71 @@
 .Portfolio {
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: white;
   padding: 1em 0px;
-  width: 100%;
-  padding-top: 10vh;
-  max-width: 100vw;
+  width: 100vw;
 
   --preview-image-size: 300px;
   --detail-image-size: 500px;
+  --width: 1024px;
 }
 
-.Portfolio > h2 {
-  position: absolute;
+.portfolio-container-outer {
+  margin: auto;
+  padding: 2em;
+  background: var(--opaque-background);
+  backdrop-filter: blur(2px);
+  border: solid black 2px;
+}
+
+.portfolio-container {
+  background: white;
+  width: var(--width);
+}
+
+.portfolio-header {
+  background: white;
+  padding: 2em;
+  margin: 0;
 }
 
 .portfolio-content {
-  position: absolute;
-  height: 100%;
+  transition: 0.5s;
+  display: flex;
+  flex-direction: row;
   width: 1024px;
-  margin: 0 auto;
-  padding-top: 100px;
   overflow-x: hidden;
-  overflow-y: auto;
 }
 
 .ProjectsContainer {
-  position: absolute;
-  transform: translateX(-200%);
-  transition: 0.5s ease;
+  position: relative;
+  width: 100%;
+  height: 500px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
-  max-width: 1024px;
-  max-height: 900px;
+  overflow-y: scroll;
+  margin-bottom: 3em;
+
+  transform: translateX(-100vw);
+  transition: 0.5s;
 }
 
 .ProjectDetails {
   position: absolute;
-  transform: translateX(200%);
-  transition: 0.5s ease;
-  background-color: white;
+  background-color: var(--color3);
+  width: var(--width);
   display: flex;
   flex-direction: row;
-  margin: auto;
-  box-shadow: var(--shadow-value);
+
+  transform: translateX(100vw);
+  transition: 0.5s;
 }
 
 .visible {
-  transform: translateY(0%);
-  transition: 0.5s ease;
+  transform: translateX(0vw);
+  transition: 0.5s;
 }
 
 .ProjectDetailsImages {
@@ -62,7 +75,8 @@
 }
 
 .ProjectDetailsImages > img {
-  height: 100%;
+  max-height: var(--detail-image-size);
+  max-width: var(--detail-image-size);
 }
 
 .ProjectDetailsText {
@@ -71,8 +85,8 @@
 }
 
 .ProjectCard {
-  width: var(--preview-image-size);
   position: relative;
+  width: var(--preview-image-size);
   padding-bottom: 0.5em;
   box-shadow: var(--shadow-value);
   background-color: white;
@@ -108,8 +122,8 @@
   position: absolute;
   display: flex;
   top: 0;
-  height: 100%;
-  width: 100%;
+  width: var(--preview-image-size);
+  height: var(--preview-image-size);
   opacity: 0;
   background-color: rgba(0, 0, 0, 0.1);
 }

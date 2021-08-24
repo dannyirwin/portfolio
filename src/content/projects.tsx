@@ -20,6 +20,9 @@ import sampL03 from '../images/projects/sampL03.png';
 import sampL04 from '../images/projects/sampL04.png';
 import sampL05 from '../images/projects/sampL05.png';
 
+import sightless01 from '../images/projects/sightless01.png';
+import sightless02 from '../images/projects/sightless02.jpeg';
+
 export const projects = [
   // {
   //   title: '_title',
@@ -134,6 +137,21 @@ export const projects = [
         label: 'Visit Site',
         url: 'https://dannyirwin.github.io/phase-2-group-project/',
         icon: <FaWindowRestore />
+      }
+    ]
+  },
+  {
+    title: 'SightlessVR',
+    previewImage: sightless01,
+    previewText: 'VR Audio Haptic Experiment',
+    techs: 'UnrealEngine4 Garageband',
+    images: [sightless01],
+    description: 'Sightless ...',
+    links: [
+      {
+        label: 'Trailer',
+        url: 'https://www.youtube.com/watch?v=BqiLSUTwXIo',
+        icon: <FaVideo />
       }
     ]
   }
