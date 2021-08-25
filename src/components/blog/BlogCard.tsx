@@ -29,7 +29,7 @@ export default function BlogCard({ post, index }: props) {
           {post?.description && <p>{post.description}</p>}
         </div>
         <div className='blog-card-source'>
-          {post.icon}
+          {/* {post.icon} */}
           <FaMedium /> {/* //TODO: un-hard code this */}
           <p>{post?.source}</p>
         </div>

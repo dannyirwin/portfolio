@@ -1,6 +1,7 @@
 import React from 'react';
 
 import config from '../../config';
+import SocialMediaLinks from '../SocialMediaLinks';
 
 import './Header.css';
 
@@ -59,6 +60,7 @@ export default function Header({
       style={{ background: handleHeaderColor() }}
     >
       {showNavButtons()}
+      <SocialMediaLinks />
     </header>
   );
 }

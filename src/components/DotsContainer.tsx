@@ -12,7 +12,11 @@ export default function DotsContainer({ numberOfDots = 1, color }: props) {
     const opacityInc = 1 / (numberOfDots + 1);
     for (let i = 0; i < numberOfDots; i++) {
       dots.unshift(
-        <div className='Dot' style={{ background: color, opacity: opacity }}>
+        <div
+          className='Dot'
+          key={i}
+          style={{ background: color, opacity: opacity }}
+        >
           {' '}
         </div>
       );

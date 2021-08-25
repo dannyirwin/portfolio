@@ -164,9 +164,11 @@
   cursor: pointer;
 }
 
-.ProjectDetails > button > p {
+.ProjectDetails > button > * {
   text-orientation: sideways-right;
   writing-mode: vertical-rl;
+  font-weight: 900;
+  font-size: 16px;
 }
 
 .project-links-container {
@@ -193,19 +195,26 @@
   position: absolute;
   bottom: 0;
   display: flex;
+  justify-content: space-between;
   width: var(--detail-image-size);
   flex-direction: row;
   justify-content: space-between;
-  background-color: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(2px);
+  height: 100%;
 }
 
 .slideshow-controls > button {
   display: flex;
   align-content: center;
   justify-content: center;
-  padding: 3px;
+  padding: 1em;
   cursor: pointer;
-  color: white;
-  margin: 5px;
+  color: black;
+  background: rgba(255, 255, 255, 0.2);
+  margin: auto 0;
+  border: solid 2px var(--opaque-background);
+}
+
+.slideshow-controls > button:hover {
+  background: rgba(255, 255, 255, 0.5);
+  border: solid 2px var(grey);
 }
