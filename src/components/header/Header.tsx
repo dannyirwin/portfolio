@@ -32,7 +32,7 @@ export default function Header({
           onClick={() => scrollTo(sectionRef.ref)}
           key={i}
         >
-          {window.innerWidth < 500 ? sectionRef.icon({}) : sectionRef.section}
+          {window.innerWidth < 700 ? sectionRef.icon({}) : sectionRef.section}
         </button>
       );
     });
@@ -60,7 +60,7 @@ export default function Header({
       style={{ background: handleHeaderColor() }}
     >
       {showNavButtons()}
-      <SocialMediaLinks />
+      {window.innerWidth > 780 && <SocialMediaLinks />}
     </header>
   );
 }

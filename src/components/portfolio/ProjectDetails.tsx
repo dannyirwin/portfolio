@@ -33,11 +33,12 @@ export default function ProjectDetails({
   const handleGoBack = () => {
     setImageIndex(0);
     toggleView();
+    console.log('object');
   };
 
   return (
     <div className={`ProjectDetails ${handleVisibleClass()}`}>
-      <button onClick={handleGoBack}>
+      <button className='BackToGalleryBtn' onClick={handleGoBack}>
         <FaAngleDoubleLeft />
         <p>Back to Project Gallery</p>
         <FaAngleDoubleLeft />

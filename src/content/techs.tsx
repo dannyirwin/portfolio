@@ -45,14 +45,14 @@ export const techs = [
     title: 'Node',
     image: nodeLogo
   },
-  {
-    title: 'Express',
-    image: expressLogo
-  },
-  {
-    title: 'Knex',
-    image: knexLogo
-  },
+  // {
+  //   title: 'Express',
+  //   image: expressLogo
+  // },
+  // {
+  //   title: 'Knex',
+  //   image: knexLogo
+  // },
   {
     title: 'Redux',
     image: reduxLogo
@@ -61,10 +61,10 @@ export const techs = [
     title: 'TypeScript',
     image: tsLogo
   },
-  {
-    title: 'P5',
-    image: p5Logo
-  },
+  // {
+  //   title: 'P5',
+  //   image: p5Logo
+  // },
   {
     title: 'Firebase',
     image: firebaseLogo
@@ -72,17 +72,17 @@ export const techs = [
   {
     title: 'Heroku',
     image: herokuLogo
-  },
-  {
-    title: 'JWT',
-    image: jwtLogo
-  },
-  {
-    title: 'Bcrypt',
-    image: bcryptLogo
-  },
-  {
-    title: 'Unreal',
-    image: unrealLogo
   }
+  // {
+  //   title: 'JWT',
+  //   image: jwtLogo
+  // },
+  // {
+  //   title: 'Bcrypt',
+  //   image: bcryptLogo
+  // },
+  // {
+  //   title: 'Unreal',
+  //   image: unrealLogo
+  // }
 ];

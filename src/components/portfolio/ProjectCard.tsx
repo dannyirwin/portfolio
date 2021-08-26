@@ -15,7 +15,11 @@ export default function ProjectCard({
   selectProject
 }: props) {
   return (
-    <div className='ProjectCard' style={{ backgroundColor: borderColor }}>
+    <div
+      className='ProjectCard'
+      onClick={() => selectProject(project)}
+      style={{ backgroundColor: borderColor }}
+    >
       <img src={project.previewImage} alt={`${project.title} preview`}></img>
       <h1 className='project-title'>{project.title}</h1>
       <p>{project.previewText}</p>
@@ -23,12 +27,7 @@ export default function ProjectCard({
       <ProjectTechs techs={project.techs} />
       <div className='see-more-container'>
         <div className='see-more-btn-container'>
-          <button
-            className='see-more-btn'
-            onClick={() => selectProject(project)}
-          >
-            Details
-          </button>
+          <button className='see-more-btn'>Details</button>
         </div>
       </div>
     </div>

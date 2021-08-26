@@ -87,10 +87,11 @@
   }
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 750px) {
   .WelcomeCard {
     margin: auto;
     max-width: 70vw;
+    padding: 1em;
   }
 
   .welcome-card-inner {
@@ -116,7 +117,8 @@
   }
 
   .my-name {
-    font-size: 20px;
+    font-size: 24px;
+    padding: 0;
   }
 
   .welcome-nav-btn > * {

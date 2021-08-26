@@ -17,21 +17,23 @@
 }
 
 .nav-btn {
+  position: relative;
   font-family: var(--header-font);
   font-weight: 900;
   font-size: 20px;
   color: black;
   cursor: pointer;
+  margin: 0px;
+  padding: 15px 30px;
 }
 
 .nav-btn::before {
   position: absolute;
   content: ' ';
-  width: 0.5em;
+  width: 10%;
   height: 2px;
   background: black;
   transition: expandBar 1s reverse ease;
-  margin: auto;
   z-index: -1;
 }
 
@@ -42,5 +44,19 @@
   transition: width 0.5s ease;
   box-shadow: 1px 1px white;
 
-  width: 5em;
+  width: 60%;
+}
+
+@media only screen and (max-width: 700px) {
+  .nav-btn {
+    padding: 15px;
+  }
+
+  .nav-btn::before {
+    display: none;
+  }
+
+  .nav-btn.selected {
+    border-bottom: 4px solid black;
+  }
 }
