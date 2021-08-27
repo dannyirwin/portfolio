@@ -16,6 +16,7 @@ import Blog from './blog/Blog';
 import Contact from './contact/Contact';
 import Header from './header/Header';
 
+import { initializeApp } from 'firebase/app';
 const getDimensions = (element: any) => {
   const { height } = element.getBoundingClientRect();
   const offsetTop = element.offsetTop;
@@ -34,6 +35,13 @@ const scrollTo = (element: any) => {
     block: 'start'
   });
 };
+
+// TODO: Replace the following with your app's Firebase project configuration
+const firebaseConfig = {
+  //...
+};
+
+const app = initializeApp(firebaseConfig);
 
 function App() {
   const [visibleSection, setVisibleSection] = useState('Home');
