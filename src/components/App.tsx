@@ -16,7 +16,6 @@ import Blog from './blog/Blog';
 import Contact from './contact/Contact';
 import Header from './header/Header';
 
-import { initializeApp } from 'firebase/app';
 const getDimensions = (element: any) => {
   const { height } = element.getBoundingClientRect();
   const offsetTop = element.offsetTop;
