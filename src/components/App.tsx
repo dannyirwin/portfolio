@@ -36,13 +36,6 @@ const scrollTo = (element: any) => {
   });
 };
 
-// TODO: Replace the following with your app's Firebase project configuration
-const firebaseConfig = {
-  //...
-};
-
-const app = initializeApp(firebaseConfig);
-
 function App() {
   const [visibleSection, setVisibleSection] = useState('Home');
 
@@ -55,8 +48,8 @@ function App() {
 
   const sectionRefsInit = [
     { section: 'Home', ref: homeRef, icon: BsHouseDoor },
-    { section: 'About', ref: aboutRef, icon: BsInfoCircle },
     { section: 'Portfolio', ref: portfolioRef, icon: BsCollection },
+    { section: 'About', ref: aboutRef, icon: BsInfoCircle },
     { section: 'Blog', ref: blogRef, icon: BsFileRichtext },
     { section: 'Contact', ref: contactRef, icon: BsEnvelope }
   ];
@@ -105,8 +98,8 @@ function App() {
         visibleSection={visibleSection}
         innerRef={headerRef}
       />
-      <About innerRef={aboutRef} />
       <Portfolio innerRef={portfolioRef} />
+      <About innerRef={aboutRef} />
       <Blog innerRef={blogRef} />
       <Contact innerRef={contactRef} />
     </div>

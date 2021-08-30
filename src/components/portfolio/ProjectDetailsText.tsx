@@ -16,10 +16,10 @@ export default function ProjectDetailsText({ project }: props) {
   };
 
   return (
-    <div className='ProjectDetailsText'>
+    <div className='ProjectDetailsText' style={{ borderColor: project.color }}>
       <h2>{project.title}</h2>
       <p>{project.description}</p>
-      <hr></hr>
+      <hr style={{ backgroundColor: project.color }}></hr>
       <div className='project-links-container'>{showLinks()}</div>
       <ProjectTechs techs={project.techs} />
     </div>

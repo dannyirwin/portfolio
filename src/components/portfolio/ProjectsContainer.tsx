@@ -23,13 +23,9 @@ export default function ProjectsContainer({ selectProject, isInView }: props) {
 
   const showProjects = () => {
     return projects.map((project: project, i: number) => {
+      project.color = getColor(i);
       return (
-        <ProjectCard
-          project={project}
-          borderColor={getColor(i)}
-          key={i}
-          selectProject={selectProject}
-        />
+        <ProjectCard project={project} key={i} selectProject={selectProject} />
       );
     });
   };

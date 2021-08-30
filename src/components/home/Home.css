@@ -35,9 +35,8 @@
 .my-name {
   display: inline;
   font-family: var(--header-font);
-  font-weight: 900;
+  font-weight: 500;
   font-size: 36px;
-  color: grey;
   text-shadow: 2px 2px lightgrey;
   padding: 0.5em;
 }
@@ -46,7 +45,7 @@
   content: 'danny irwin';
   position: absolute;
   transform: translate(-2px, -2px);
-  color: black;
+  color: var(--color4);
   text-shadow: none;
 }
 

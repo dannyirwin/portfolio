@@ -6,6 +6,7 @@ export interface project {
   images: any[];
   description: string;
   links: projectLink[];
+  color?: string;
 }
 
 export interface projectLink {

@@ -152,7 +152,8 @@ export const projects = [
     previewText: 'VR Audio Haptic Experiment',
     techs: 'UnrealEngine',
     images: [sightless01],
-    description: 'Sightless ...',
+    description:
+      "Sightless is a VR experiment I built with my friend and software dev mentor. We wanted to create an experience where users needed to navigate a VR space using only auditor and haptic feedback: no visuals whatsoever. This was a great opportunity for me to work closely with a more experienced developer who could help me problem solve, assign tasks, and organize our workflow. Specifically, I composed the music and built the system to dynamically play the game music based on the player's proximity to the exit.",
     links: [
       {
         label: 'Trailer',
@@ -164,7 +165,8 @@ export const projects = [
   {
     title: 'Generative Art',
     previewImage: genArt01,
-    previewText: 'Making a hobby of Math and Art',
+    previewText:
+      "I've been dabbling in some generative art here and there! I'm particularly interested in playing with different concepts in math and science. I primarily work with p5 at the moment.",
     techs: 'p5',
     images: [genArt01, genArt02, genArt03],
     description: 'The hobby and fun stuff...',

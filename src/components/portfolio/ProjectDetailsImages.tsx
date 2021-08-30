@@ -1,26 +1,29 @@
 import React from 'react';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
+import { projects } from '../../content/projects';
 
 interface props {
   image: any;
   showControls: boolean;
   handleNextImage: (direction: number) => void;
+  arrowColor: string | undefined;
 }
 
 export default function ProjectDetailsImages({
   image,
   handleNextImage,
-  showControls
+  showControls,
+  arrowColor
 }: props) {
   return (
     <div className='ProjectDetailsImages'>
       {showControls && (
         <div className='slideshow-controls'>
           <button onClick={() => handleNextImage(1)}>
-            <FaArrowLeft />
+            <FaArrowLeft style={{ fill: arrowColor }} />
           </button>
           <button onClick={() => handleNextImage(-1)}>
-            <FaArrowRight />
+            <FaArrowRight style={{ fill: arrowColor }} />
           </button>
         </div>
       )}

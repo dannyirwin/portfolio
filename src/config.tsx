@@ -1,5 +1,5 @@
 const config = {
-  colors: ['#1be7ff', '#6eeb83', '#e4ff1a', '#ffb800', '#FF5714'],
+  colors: ['#003d5b', '#30638e', '#00798c', '#d1495b', '#edae49'],
   cellSize: 50,
   movesPerCell: 4,
   nOfRunners: 50,

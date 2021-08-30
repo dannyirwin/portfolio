@@ -33,12 +33,15 @@ export default function ProjectDetails({
   const handleGoBack = () => {
     setImageIndex(0);
     toggleView();
-    console.log('object');
   };
 
   return (
     <div className={`ProjectDetails ${handleVisibleClass()}`}>
-      <button className='BackToGalleryBtn' onClick={handleGoBack}>
+      <button
+        className='BackToGalleryBtn'
+        onClick={handleGoBack}
+        style={{ backgroundColor: project.color }}
+      >
         <FaAngleDoubleLeft />
         <p>Back to Project Gallery</p>
         <FaAngleDoubleLeft />
@@ -47,6 +50,7 @@ export default function ProjectDetails({
         image={project.images[imageIndex]}
         handleNextImage={handleNextImage}
         showControls={project.images.length > 1}
+        arrowColor={project?.color}
       />
       <ProjectDetailsText project={project} />
     </div>

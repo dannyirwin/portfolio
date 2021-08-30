@@ -8,6 +8,7 @@
   --preview-image-size: 300px;
   --detail-image-size: 500px;
   --width: 1024px;
+  --color: var(--color3);
 }
 
 .portfolio-container-outer {
@@ -34,6 +35,7 @@
   position: relative;
   transition: 0.5s;
   display: flex;
+  height: 100%;
   flex-direction: row;
   max-width: var(--width);
   overflow-x: hidden;
@@ -41,7 +43,7 @@
 
 .ProjectsContainer {
   width: 100%;
-  height: 500px;
+  height: 700px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -55,13 +57,13 @@
 
 .ProjectDetails {
   position: absolute;
-  background-color: var(--color3);
   width: var(--width);
   display: flex;
   flex-direction: row;
 
   transform: translateX(100vw);
   transition: 0.5s;
+  margin: auto;
 }
 
 .visible {
@@ -83,6 +85,7 @@
 .ProjectDetailsText {
   max-width: 50ch;
   margin: 2em;
+  border-top: solid 2px;
 }
 
 .ProjectCard {
@@ -92,6 +95,7 @@
   box-shadow: var(--shadow-value);
   background-color: white;
   margin: 0.5em;
+  color: white;
 }
 
 .ProjectCard > p {
@@ -102,17 +106,18 @@
   display: inline;
   font-family: var(--header-font);
   font-size: 26px;
-  color: black;
-  text-shadow: 2px 2px white;
+  color: white;
   padding: 0.5em;
+  font-weight: 500;
 }
 
-.project-title::before {
+/* .project-title::before {
   position: absolute;
   transform: translate(2px, 2px);
   color: black;
   text-shadow: none;
-}
+
+} */
 
 .ProjectCard > img {
   width: var(--preview-image-size);
@@ -164,14 +169,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: var(--color3);
   cursor: pointer;
+  color: white;
 }
 
 .BackToGalleryBtn > * {
   text-orientation: sideways-right;
   writing-mode: vertical-rl;
-  font-weight: 900;
+  font-weight: 500;
   font-size: 16px;
 }
 

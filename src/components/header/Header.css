@@ -12,14 +12,14 @@
 }
 
 .nav-btn.selected {
-  color: black;
-  text-shadow: 2px 2px white;
+  color: white;
+  /* text-shadow: 2px 2px white; */
 }
 
 .nav-btn {
   position: relative;
   font-family: var(--header-font);
-  font-weight: 900;
+  font-weight: 500;
   font-size: 20px;
   color: black;
   cursor: pointer;
@@ -42,7 +42,8 @@
   -moz-transition: width 0.5s ease;
   -o-transition: width 0.5s ease;
   transition: width 0.5s ease;
-  box-shadow: 1px 1px white;
+  /* box-shadow: 1px 1px white; */
+  background-color: white;
 
   width: 60%;
 }
