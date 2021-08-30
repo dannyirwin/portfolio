@@ -165,11 +165,11 @@ export const projects = [
   {
     title: 'Generative Art',
     previewImage: genArt01,
-    previewText:
-      "I've been dabbling in some generative art here and there! I'm particularly interested in playing with different concepts in math and science. I primarily work with p5 at the moment.",
+    previewText: 'Math and Art and Fun with Code',
     techs: 'p5',
     images: [genArt01, genArt02, genArt03],
-    description: 'The hobby and fun stuff...',
+    description:
+      "I've been dabbling in some generative art here and there! I'm particularly interested in playing with different concepts in math and science. I primarily work with p5 at the moment.",
     links: [
       {
         label: 'Circle of Strings',
