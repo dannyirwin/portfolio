@@ -27,9 +27,8 @@
 
 input[type='submit'] {
   background-color: var(--color5);
-  font-weight: 900;
+  font-weight: 500;
   text-transform: uppercase;
-  text-shadow: 1px 1px 0 white;
   font-size: 20px;
 }
 
