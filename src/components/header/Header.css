@@ -13,7 +13,6 @@
 
 .nav-btn.selected {
   color: white;
-  /* text-shadow: 2px 2px white; */
 }
 
 .nav-btn {
@@ -28,7 +27,9 @@
 }
 
 .nav-btn:hover,
-.nav-btn:focus {
+.nav-btn:focus,
+.SocialMediaLinks > a:hover,
+.SocialMediaLinks > a:focus {
   color: lightgrey;
 }
 
@@ -62,11 +63,6 @@
   background-color: white;
 
   width: 60%;
-}
-
-.SocialMediaLinks > a:hover,
-.SocialMediaLinks > a:focus {
-  color: lightgrey;
 }
 
 @media only screen and (max-width: 700px) {

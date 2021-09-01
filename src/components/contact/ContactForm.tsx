@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import emailjs from 'emailjs-com';
+import emailJS from 'emailjs-com';
 import RedAsterisk from './RedAsterisk';
 
 export default function ContactForm() {
@@ -8,7 +8,7 @@ export default function ContactForm() {
   function sendEmail(e: any) {
     e.preventDefault();
 
-    emailjs
+    emailJS
       .sendForm(
         'service_iicr66w',
         'template_vuydnsw',
@@ -52,14 +52,14 @@ export default function ContactForm() {
         <label htmlFor='company'>Company:</label>
         <input type='text' name='company'></input>
       </div>
-      <div className='input-container'>
+      <div className='input-container message-input-container'>
         <label htmlFor='message'>
           <RedAsterisk />
           Message:
         </label>
         <textarea name='message' required></textarea>
       </div>
-      <div style={{ color: 'red' }}>* indicates a required field</div>
+      <div style={{ color: 'red' }}>*indicates a required field</div>
       <p>{statusDisplay}</p>
       <input type='submit' value='Send Message' />
     </form>
