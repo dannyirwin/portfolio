@@ -20,6 +20,10 @@
   --opaque-background: rgba(0, 0, 0, 0.05);
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
   font-family: var(--header-font);
@@ -37,7 +41,7 @@
 
 section {
   min-height: 100vh;
-  min-width: 100vw;
+  max-width: 100vw;
   position: relative;
   overflow-y: hidden;
 }
