@@ -14,7 +14,39 @@
   padding: 1em;
   border: solid 2px black;
   margin: auto;
-  margin-bottom: 2em;
+}
+
+.ContactHeader > button {
+  font-size: 20px;
+  color: white;
+  background: var(--color5);
+  padding: 0 3em;
+  cursor: pointer;
+}
+
+.ContactHeader > button:hover,
+.ContactHeader > button:focus {
+  color: lightgrey;
+}
+
+.contact-form-container {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(2px);
+  margin: auto;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  z-index: -20;
+  opacity: 0;
+  bottom: 0;
+  transition: 0.5s;
+}
+
+.contact-form-container.visible {
+  z-index: 20;
+  opacity: 1;
+  transition: 0.2s;
 }
 
 .ContactForm {
@@ -23,6 +55,36 @@
   display: flex;
   flex-direction: column;
   padding: 2em;
+  margin: auto;
+  transform: translateY(100vh);
+  transition: 0.5s ease;
+}
+
+.ContactForm.visible {
+  transform: translateY(0%);
+  transition: 0.5s ease;
+}
+
+.ContactHeader > button > h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ContactForm > button {
+  border: 2px solid black;
+  font-size: 20px;
+  width: 100%;
+  margin: 0;
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ContactForm > button:hover {
+  color: var(--color5);
+  border-color: var(--color5);
 }
 
 input[type='submit'] {
@@ -34,15 +96,6 @@ input[type='submit'] {
 input[type='submit']:hover,
 input[type='submit']:focus {
   color: white;
-}
-
-.contact-form-container {
-  background-color: var(--opaque-background);
-  backdrop-filter: blur(2px);
-  border: 2px solid black;
-  margin: auto;
-  margin-top: 2em;
-  padding: 2em;
 }
 
 .input-container {

@@ -1,10 +1,20 @@
-import React from 'react';
+import React, { MouseEvent } from 'react';
+import { FaTelegramPlane } from 'react-icons/fa';
 import SocialMediaLinks from '../SocialMediaLinks';
 
-export default function ContactHeader() {
+interface props {
+  toggleShowContactForm: (event?: React.MouseEvent<HTMLButtonElement>) => void;
+}
+
+export default function ContactHeader({ toggleShowContactForm }: props) {
   return (
     <div className='ContactHeader'>
-      <h2>Get in touch!</h2>
+      <button onClick={toggleShowContactForm}>
+        <h2>
+          <FaTelegramPlane />
+          Get in touch!
+        </h2>
+      </button>
       <hr></hr>
       <p>or send an email to dirwin123@gmail.com</p>
       <SocialMediaLinks />
