@@ -20,22 +20,28 @@ interface runner {
 }
 
 export default function P5Background() {
-  const { colors, cellSize, movesPerCell, nOfRunners, randomTurnChance } =
-    config;
+  const {
+    colors,
+    cellSize,
+    movesPerCell,
+    nOfRunners,
+    randomTurnChance,
+    backgroundColor
+  } = config;
 
   let runners: runner[] = [];
   let cells: cell[] = [];
 
   function setup(p5: p5Types, canvasParentRef: Element) {
     p5.createCanvas(p5.windowWidth, p5.windowHeight).parent(canvasParentRef);
-    p5.background(255);
+    p5.background(backgroundColor);
     p5.frameRate(8);
     generateCells(p5);
     generateRunners(p5);
   }
   function draw(p5: p5Types) {
     p5.stroke(0);
-    p5.background(255, 150);
+    p5.background(backgroundColor, 150);
     drawCells(p5);
     handleRandomTurns(p5);
     runners.forEach(runner => {

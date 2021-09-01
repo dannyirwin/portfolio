@@ -47,8 +47,8 @@ function App() {
 
   const sectionRefsInit = [
     { section: 'Home', ref: homeRef, icon: BsHouseDoor },
-    { section: 'Portfolio', ref: portfolioRef, icon: BsCollection },
     { section: 'About', ref: aboutRef, icon: BsInfoCircle },
+    { section: 'Portfolio', ref: portfolioRef, icon: BsCollection },
     { section: 'Blog', ref: blogRef, icon: BsFileRichtext },
     { section: 'Contact', ref: contactRef, icon: BsEnvelope }
   ];
@@ -97,8 +97,8 @@ function App() {
         visibleSection={visibleSection}
         innerRef={headerRef}
       />
-      <Portfolio innerRef={portfolioRef} />
       <About innerRef={aboutRef} />
+      <Portfolio innerRef={portfolioRef} />
       <Blog innerRef={blogRef} />
       <Contact innerRef={contactRef} />
     </div>
