@@ -141,7 +141,8 @@
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-.see-more-container:hover {
+.see-more-container:hover,
+.see-more-container:focus-within {
   opacity: 1;
 }
 
@@ -175,6 +176,11 @@
   align-items: center;
   cursor: pointer;
   color: white;
+}
+
+.BackToGalleryBtn:hover,
+.BackToGalleryBtn:focus {
+  color: grey;
 }
 
 .BackToGalleryBtn > * {
@@ -226,7 +232,8 @@
   border: solid 2px var(--opaque-background);
 }
 
-.slideshow-controls > button:hover {
+.slideshow-controls > button:hover,
+.slideshow-controls > button:focus {
   background: rgba(255, 255, 255, 0.5);
   border: solid 2px var(grey);
 }

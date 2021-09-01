@@ -116,12 +116,16 @@ label {
   flex-wrap: nowrap;
 }
 
+.SocialMediaLinks > a > svg {
+  width: 26px;
+  height: 26px;
+}
+
 .SocialMediaLinks > a {
   color: black;
 }
 
 .SocialMediaLinks > a > * {
-  font-size: 20px;
   margin: 5px;
 }
 

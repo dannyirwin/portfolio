@@ -27,6 +27,22 @@
   padding: 15px 30px;
 }
 
+.nav-btn:hover,
+.nav-btn:focus {
+  color: lightgrey;
+}
+
+.nav-btn:hover::before,
+.nav-btn:focus::before {
+  -webkit-transition: width 0.5s ease;
+  -moz-transition: width 0.5s ease;
+  -o-transition: width 0.5s ease;
+  transition: width 0.5s ease;
+  /* box-shadow: 1px 1px white; */
+  background-color: lightgrey;
+  width: 35%;
+}
+
 .nav-btn::before {
   position: absolute;
   content: ' ';
@@ -48,6 +64,11 @@
   width: 60%;
 }
 
+.SocialMediaLinks > a:hover,
+.SocialMediaLinks > a:focus {
+  color: lightgrey;
+}
+
 @media only screen and (max-width: 700px) {
   .nav-btn {
     padding: 15px;
@@ -58,6 +79,6 @@
   }
 
   .nav-btn.selected {
-    border-bottom: 4px solid black;
+    border-bottom: 4px solid white;
   }
 }
