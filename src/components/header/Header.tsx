@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useLayoutEffect, useState } from 'react';
 
 import config from '../../config';
 import SocialMediaLinks from '../SocialMediaLinks';
@@ -18,12 +18,26 @@ interface props {
   visibleSection: string;
 }
 
+const useWindowSize = () => {
+  const [size, setSize] = useState([0, 0]);
+  useLayoutEffect(() => {
+    const updateSize = () => {
+      setSize([window.innerWidth, window.innerHeight]);
+    };
+    window.addEventListener('resize', updateSize);
+    updateSize();
+    return () => window.removeEventListener('resize', updateSize);
+  }, []);
+  return size;
+};
+
 export default function Header({
   scrollTo,
   sectionRefs,
   visibleSection,
   innerRef
 }: props) {
+  useWindowSize();
   const showNavButtons = () => {
     return sectionRefs.map((sectionRef: sectionRef, i) => {
       return (

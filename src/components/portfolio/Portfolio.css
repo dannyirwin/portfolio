@@ -238,7 +238,11 @@
   border: solid 2px var(grey);
 }
 
-@media only screen and (max-width: 1150px) {
+.click-to-view-details {
+  visibility: hidden;
+}
+
+@media only screen and (max-width: 1030px) {
   .Portfolio {
     --width: 100%;
     --detail-image-size: 40vw;
@@ -252,13 +256,6 @@
     margin: 10px;
     overflow-x: auto;
   }
-}
-
-@media only screen and (max-width: 850px) {
-  .Portfolio {
-    --width: 100%;
-    --detail-image-size: 300px;
-  }
 
   .ProjectDetails {
     flex-direction: column;
@@ -268,19 +265,32 @@
 
   .BackToGalleryBtn {
     top: 0;
-    min-height: 32px;
+    height: 32px;
     flex-direction: row;
+    width: 100%;
   }
 
   .BackToGalleryBtn > * {
     text-orientation: upright;
     writing-mode: horizontal-tb;
   }
+
+  .Portfolio {
+    --width: 100%;
+    --detail-image-size: 500px;
+  }
+
+  .click-to-view-details {
+    visibility: visible;
+  }
 }
 
 @media only screen and (max-width: 750px) {
   .Portfolio {
-    --preview-image-size: 150px;
+    --preview-image-height: 100px;
+    --preview-image-width: 130px;
+    --detail-image-size: 300px;
+    margin: 2px;
   }
 
   .project-title {

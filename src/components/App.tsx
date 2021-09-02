@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef, useEffect, useState, useLayoutEffect } from 'react';
 import {
   BsInfoCircle,
   BsHouseDoor,
@@ -15,6 +15,7 @@ import Portfolio from './portfolio/Portfolio';
 import Blog from './blog/Blog';
 import Contact from './contact/Contact';
 import Header from './header/Header';
+import P5Background from './home/P5Background';
 
 const getDimensions = (element: any) => {
   const { height } = element.getBoundingClientRect();
@@ -83,9 +84,8 @@ function App() {
       window.removeEventListener('scroll', handleScroll);
     };
   }, [visibleSection, sectionRefs]);
-
   return (
-    <div className='App'>
+    <main className='App'>
       <Home
         scrollTo={scrollTo}
         sectionRefs={[sectionRefs[1], sectionRefs[4]]}
@@ -101,7 +101,7 @@ function App() {
       <Portfolio innerRef={portfolioRef} />
       <Blog innerRef={blogRef} />
       <Contact innerRef={contactRef} />
-    </div>
+    </main>
   );
 }
 
