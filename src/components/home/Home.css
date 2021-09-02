@@ -121,8 +121,7 @@
     font-size: 20px;
     padding: 0;
   }
-
-  .welcome-nav-btn > * {
+  w .welcome-nav-btn > * {
     font-size: 14px;
   }
 }

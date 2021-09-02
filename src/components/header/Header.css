@@ -11,10 +11,6 @@
   align-items: center;
 }
 
-.nav-btn.selected {
-  color: white;
-}
-
 .nav-btn {
   position: relative;
   font-family: var(--header-font);
@@ -59,10 +55,13 @@
   -moz-transition: width 0.5s ease;
   -o-transition: width 0.5s ease;
   transition: width 0.5s ease;
-  /* box-shadow: 1px 1px white; */
   background-color: white;
 
   width: 60%;
+}
+
+.nav-btn.selected {
+  color: white;
 }
 
 @media only screen and (max-width: 700px) {
