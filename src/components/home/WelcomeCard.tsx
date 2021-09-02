@@ -8,6 +8,7 @@ interface props {
 }
 
 export default function WelcomeCard({ sectionRefs, scrollTo }: props) {
+  console.log(sectionRefs);
   return (
     <div className='WelcomeCard'>
       <div className='welcome-card-inner'>
