@@ -1,20 +1,20 @@
 import htmlLogo from '../images/logos/htmlLogo.png';
 import cssLogo from '../images/logos/cssLogo.png';
-import expressLogo from '../images/logos/expressLogo.png';
+// import expressLogo from '../images/logos/expressLogo.png';
 import firebaseLogo from '../images/logos/firebaseLogo.svg';
 import herokuLogo from '../images/logos/herokuLogo.png';
 import jsLogo from '../images/logos/jsLogo.webp';
-import knexLogo from '../images/logos/knexLogo.png';
+// import knexLogo from '../images/logos/knexLogo.png';
 import nodeLogo from '../images/logos/nodeLogo.png';
-import p5Logo from '../images/logos/p5Logo.png';
+// import p5Logo from '../images/logos/p5Logo.png';
 import railsLogo from '../images/logos/railsLogo.png';
 import reactLogo from '../images/logos/reactLogo.png';
 import reduxLogo from '../images/logos/reduxLogo.png';
 import rubyLogo from '../images/logos/rubyLogo.png';
 import tsLogo from '../images/logos/tsLogo.png';
-import jwtLogo from '../images/logos/jwtLogo.png';
-import bcryptLogo from '../images/logos/bcryptLogo.jpeg';
-import unrealLogo from '../images/logos/unrealLogo.png';
+// import jwtLogo from '../images/logos/jwtLogo.png';
+// import bcryptLogo from '../images/logos/bcryptLogo.jpeg';
+// import unrealLogo from '../images/logos/unrealLogo.png';
 
 export const techs = [
   {

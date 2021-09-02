@@ -1,4 +1,4 @@
-import React, { MouseEvent, SyntheticEvent, useState } from 'react';
+import React, { useState } from 'react';
 
 import './Contact.css';
 import ContactBackground from './ContactBackground';

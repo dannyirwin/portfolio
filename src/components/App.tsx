@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState, useLayoutEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import {
   BsInfoCircle,
   BsHouseDoor,
@@ -15,7 +15,6 @@ import Portfolio from './portfolio/Portfolio';
 import Blog from './blog/Blog';
 import Contact from './contact/Contact';
 import Header from './header/Header';
-import P5Background from './home/P5Background';
 
 const getDimensions = (element: any) => {
   const { height } = element.getBoundingClientRect();

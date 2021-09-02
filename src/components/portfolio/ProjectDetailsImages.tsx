@@ -1,6 +1,5 @@
 import React from 'react';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
-import { projects } from '../../content/projects';
 
 interface props {
   image: any;
