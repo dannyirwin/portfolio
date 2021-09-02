@@ -61,7 +61,7 @@ export default function Header({
     let color;
     sectionRefs.forEach((sectionRef, i) => {
       if (sectionRef.section === visibleSection) {
-        color = config.colors[i];
+        color = i === 0 ? config.colors[1] : config.colors[i];
       }
     });
     return color;
