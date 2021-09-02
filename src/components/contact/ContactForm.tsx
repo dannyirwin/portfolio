@@ -27,7 +27,6 @@ export default function ContactForm({
       )
       .then(
         result => {
-          console.log(result.text);
           setStatusDisplay(
             'You message has been sent! \n Thank you for reaching out and I will be in touch!'
           );
