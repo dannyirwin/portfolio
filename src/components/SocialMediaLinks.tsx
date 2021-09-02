@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaFileDownload, FaGithub, FaLinkedin } from 'react-icons/fa';
 
 export default function SocialMediaLinks() {
   return (
@@ -15,6 +15,10 @@ export default function SocialMediaLinks() {
       >
         <FaLinkedin />
       </a>
+      {/* <button>
+        <FaFileDownload />
+        Resume
+      </button> */}
     </div>
   );
 }
