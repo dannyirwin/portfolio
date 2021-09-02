@@ -22,7 +22,7 @@ export default function WelcomeCard({ sectionRefs, scrollTo }: props) {
             className='welcome-nav-btn'
             onClick={() => scrollTo(sectionRefs[0].ref)}
           >
-            <p>See My Work</p>
+            <p>A bit about me</p>
             <FaAngleDoubleRight />
           </button>
           <button
