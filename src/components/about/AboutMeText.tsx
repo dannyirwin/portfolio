@@ -10,9 +10,9 @@ const AboutMeText: React.FC = () => {
       </p>
       <p>
         Before transitioning into tech, I worked primarily as a professional
-        theatre actor. I graduated from Emerson College and worked in theatres
-        all over the country for 6 years, mostly living in Philadelphia. I've
-        also dipped my feet into the food and customer service industries.
+        actor. I graduated from Emerson College and worked in theatres all over
+        the country for 6 years, mostly living in Philadelphia. I've also dipped
+        my feet into the food and customer service industries.
       </p>
       <p>
         Off the clock I'm usually trying to learn some new hobby: recently
