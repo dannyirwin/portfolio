@@ -25,7 +25,7 @@ import sampL05 from '../images/projects/sampL05.png';
 
 import sightless01 from '../images/projects/sightless01.png';
 
-import genArt01 from '../images/projects/genArt01.png';
+import genArt01 from '../images/projects/genArt01.webp';
 import genArt02 from '../images/projects/genArt02.png';
 import genArt03 from '../images/projects/genArt03.png';
 
