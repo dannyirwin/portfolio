@@ -13,7 +13,12 @@ export default function Resume({ resumeIsVisible, setResumeIsVisible }: props) {
       }`}
       onClick={() => setResumeIsVisible(false)}
     >
-      <img src='../../images/resume.pdf' alt='Resume'></img>
+      <iframe
+        className={`Resume ${resumeIsVisible ? 'visible' : ''}`}
+        src='https://drive.google.com/file/d/1jVZKIxGHOWLbw1WwE7ys1MEtvvf0Be_U/preview'
+        allow='autoplay'
+        title='resume'
+      ></iframe>
     </div>
   );
 }
