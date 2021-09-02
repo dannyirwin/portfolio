@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { SetStateAction } from 'react';
 
-import { FaFileDownload, FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaFileDownload } from 'react-icons/fa';
 
-export default function SocialMediaLinks() {
+interface props {
+  setResumeIsVisible: React.Dispatch<SetStateAction<boolean>>;
+}
+
+export default function SocialMediaLinks({ setResumeIsVisible }: props) {
   return (
     <div className='SocialMediaLinks'>
       <a href='https://github.com/dannyirwin' target='_blank' rel='noreferrer'>
@@ -15,10 +19,14 @@ export default function SocialMediaLinks() {
       >
         <FaLinkedin />
       </a>
-      {/* <button>
+      <button
+        onClick={() => {
+          setResumeIsVisible(true);
+        }}
+      >
         <FaFileDownload />
         Resume
-      </button> */}
+      </button>
     </div>
   );
 }

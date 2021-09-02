@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { SetStateAction } from 'react';
 
 import config from '../../config';
 import SocialMediaLinks from '../SocialMediaLinks';
 
-import { useWindowSize } from '../../hooks/useWindowSize';
-
 import './Header.css';
+import Resume from './Resume';
 
 interface sectionRef {
   section: string;
@@ -18,15 +17,18 @@ interface props {
   sectionRefs: sectionRef[];
   innerRef: any;
   visibleSection: string;
+  resumeIsVisible: boolean;
+  setResumeIsVisible: React.Dispatch<SetStateAction<boolean>>;
 }
 
 export default function Header({
   scrollTo,
   sectionRefs,
   visibleSection,
-  innerRef
+  innerRef,
+  resumeIsVisible,
+  setResumeIsVisible
 }: props) {
-  useWindowSize();
   const showNavButtons = () => {
     return sectionRefs.map((sectionRef: sectionRef, i) => {
       return (
@@ -63,7 +65,11 @@ export default function Header({
       style={{ background: handleHeaderColor() }}
     >
       {showNavButtons()}
-      {window.innerWidth > 780 && <SocialMediaLinks />}
+      <SocialMediaLinks setResumeIsVisible={setResumeIsVisible} />
+      <Resume
+        resumeIsVisible={resumeIsVisible}
+        setResumeIsVisible={setResumeIsVisible}
+      />
     </header>
   );
 }

@@ -37,6 +37,7 @@ const scrollTo = (element: any) => {
 
 function App() {
   const [visibleSection, setVisibleSection] = useState('Home');
+  const [resumeIsVisible, setResumeIsVisible] = useState(false);
 
   const headerRef = useRef<HTMLHeadElement>(null);
   const homeRef = useRef<HTMLElement>(null);
@@ -95,8 +96,10 @@ function App() {
         sectionRefs={sectionRefs}
         visibleSection={visibleSection}
         innerRef={headerRef}
+        resumeIsVisible={resumeIsVisible}
+        setResumeIsVisible={setResumeIsVisible}
       />
-      <About innerRef={aboutRef} />
+      <About innerRef={aboutRef} setResumeIsVisible={setResumeIsVisible} />
       <Portfolio innerRef={portfolioRef} />
       <Blog innerRef={blogRef} />
       <Contact innerRef={contactRef} />

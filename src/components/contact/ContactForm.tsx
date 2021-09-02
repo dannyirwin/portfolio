@@ -48,7 +48,9 @@ export default function ContactForm({
   };
   return (
     <div
-      className={`contact-form-container ${showContactForm ? 'visible' : ''}`}
+      className={`background-disable-container ${
+        showContactForm ? 'visible' : ''
+      }`}
     >
       {statusDisplay === '' ? (
         <form
