@@ -6,7 +6,6 @@ interface props {
 }
 
 export default function ContactHeader({ toggleShowContactForm }: props) {
-  console.log('hi');
   return (
     <div className='ContactHeader'>
       <button onClick={toggleShowContactForm}>

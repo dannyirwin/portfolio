@@ -27,7 +27,7 @@ export default function ProjectDetails({
   };
 
   const handleVisibleClass = () => {
-    return isInView ? 'visible' : null;
+    return isInView ? 'visible' : '';
   };
 
   const handleGoBack = () => {

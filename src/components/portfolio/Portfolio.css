@@ -69,7 +69,8 @@
   margin-top: auto;
 }
 
-.visible {
+.ProjectDetails.visible,
+.ProjectsContainer.visible {
   transform: translateX(0vw);
   transition: 0.5s;
 }
