@@ -1,9 +1,8 @@
 .About {
-  margin: none;
+  margin: 0;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-bottom: 5em;
 }
 
 .about-me-outer-container {
@@ -34,6 +33,10 @@
 
 .AboutMeText {
   text-align: start;
+}
+
+.AboutMeText > p {
+  margin-top: 1rem;
 }
 
 .AboutMeTechs {

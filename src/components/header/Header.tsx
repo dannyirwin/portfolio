@@ -1,7 +1,9 @@
-import React, { useLayoutEffect, useState } from 'react';
+import React from 'react';
 
 import config from '../../config';
 import SocialMediaLinks from '../SocialMediaLinks';
+
+import { useWindowSize } from '../../hooks/useWindowSize';
 
 import './Header.css';
 
@@ -17,19 +19,6 @@ interface props {
   innerRef: any;
   visibleSection: string;
 }
-
-const useWindowSize = () => {
-  const [size, setSize] = useState([0, 0]);
-  useLayoutEffect(() => {
-    const updateSize = () => {
-      setSize([window.innerWidth, window.innerHeight]);
-    };
-    window.addEventListener('resize', updateSize);
-    updateSize();
-    return () => window.removeEventListener('resize', updateSize);
-  }, []);
-  return size;
-};
 
 export default function Header({
   scrollTo,

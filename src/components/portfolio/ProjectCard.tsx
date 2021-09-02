@@ -1,7 +1,11 @@
 import React from 'react';
 import ProjectTechs from './ProjectTechs';
 
+import { isMobile } from 'react-device-detect';
+
 import { project } from '../../utilities/interfaces';
+
+import { useWindowSize } from '../../hooks/useWindowSize';
 
 interface props {
   project: project;
@@ -9,12 +13,14 @@ interface props {
 }
 
 export default function ProjectCard({ project, selectProject }: props) {
+  useWindowSize();
   return (
     <div
       className='ProjectCard'
       onClick={() => selectProject(project)}
       style={{ backgroundColor: project.color }}
     >
+      {isMobile ? <p>Click to see more</p> : null}
       <img src={project.previewImage} alt={`${project.title} preview`}></img>
       <h1 className='project-title'>{project.title}</h1>
       <p>{project.previewText}</p>
