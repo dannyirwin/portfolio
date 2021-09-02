@@ -2,7 +2,7 @@ import {
   FaGithub,
   FaPencilAlt,
   FaVideo,
-  FaWindowRestore
+  FaExternalLinkAlt
 } from 'react-icons/fa';
 
 import makeIt01 from '../images/projects/makeIt01.png';
@@ -69,7 +69,7 @@ export const projects = [
       {
         label: 'Visit Site',
         url: 'https://makeit-e985d.web.app/',
-        icon: <FaWindowRestore />
+        icon: <FaExternalLinkAlt />
       }
     ]
   },
@@ -95,7 +95,7 @@ export const projects = [
       {
         label: 'Visit Site',
         url: 'https://dannyirwin.github.io/order-up-frontend/',
-        icon: <FaWindowRestore />
+        icon: <FaExternalLinkAlt />
       }
     ]
   },
@@ -121,7 +121,7 @@ export const projects = [
       {
         label: 'Visit Site',
         url: 'https://dannyirwin.github.io/Orbital-Physics/',
-        icon: <FaWindowRestore />
+        icon: <FaExternalLinkAlt />
       }
     ]
   },
@@ -142,7 +142,7 @@ export const projects = [
       {
         label: 'Visit Site',
         url: 'https://dannyirwin.github.io/phase-2-group-project/',
-        icon: <FaWindowRestore />
+        icon: <FaExternalLinkAlt />
       }
     ]
   },
