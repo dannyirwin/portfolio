@@ -20,13 +20,13 @@ export default function ProjectCard({ project, selectProject }: props) {
       onClick={() => selectProject(project)}
       style={{ backgroundColor: project.color }}
     >
-      {isMobile ? <p>Click to see more</p> : null}
+      <p className={`${isMobile ? 'visible' : 'hidden'}`}>Click to see more</p>
       <img src={project.previewImage} alt={`${project.title} preview`}></img>
       <h1 className='project-title'>{project.title}</h1>
       <p>{project.previewText}</p>
       <hr style={{ backgroundColor: 'white' }}></hr>
       <ProjectTechs techs={project.techs} />
-      <div className='see-more-container'>
+      <div className={`see-more-container ${isMobile ? 'hidden' : 'visible'}`}>
         <div className='see-more-btn-container'>
           <button className='see-more-btn'>Details</button>
         </div>
