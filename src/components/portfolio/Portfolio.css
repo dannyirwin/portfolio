@@ -115,13 +115,20 @@
   font-weight: 500;
 }
 
-/* .project-title::before {
-  position: absolute;
-  transform: translate(2px, 2px);
-  color: black;
-  text-shadow: none;
-
-} */
+.this-project-info-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.this-project-info-container > svg {
+  margin-right: 5px;
+  fill: grey;
+}
+.this-project-info-container > p > a {
+  margin-right: 5px;
+  color: grey;
+}
 
 .ProjectCard > img {
   width: var(--preview-image-width);

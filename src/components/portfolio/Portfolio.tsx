@@ -6,6 +6,7 @@ import { project } from '../../utilities/interfaces';
 
 import ProjectDetails from './ProjectDetails';
 import ProjectsContainer from './ProjectsContainer';
+import PortfolioHeader from './PortfolioHeader';
 
 interface props {
   innerRef: any;
@@ -29,7 +30,7 @@ export default function Portfolio({ innerRef }: props) {
     <section className={'Portfolio'} ref={innerRef}>
       <div className='portfolio-container-outer'>
         <div className='portfolio-container'>
-          <h2 className='portfolio-header'>Want to see some of my work?</h2>
+          <PortfolioHeader />
           <div className='portfolio-content'>
             <ProjectsContainer
               selectProject={selectProject}
