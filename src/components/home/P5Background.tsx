@@ -113,7 +113,7 @@ export default function P5Background() {
     flipCell() {
       const p5 = this.p5;
       p5.strokeWeight(cellSize * 0.4);
-      p5.stroke(255);
+      p5.stroke(backgroundColor);
       this.drawCell();
       this.direction *= -1;
       p5.strokeWeight(2);
