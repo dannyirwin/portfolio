@@ -146,13 +146,15 @@ label {
   z-index: -20;
   opacity: 0;
   bottom: 0;
+  transform: translateX(100vw);
   transition: 0.5s;
 }
 
 .background-disable-container.visible {
   z-index: 20;
   opacity: 1;
-  transition: 0.2s;
+  transform: translateX(0vw);
+  transition: 0.5s;
   padding: no;
   height: 100vh;
 }
